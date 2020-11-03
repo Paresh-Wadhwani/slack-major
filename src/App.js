@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './Header.js';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       {
         // header
       }
+      <Header />
       {
         // sidebar
       }
