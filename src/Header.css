@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
-    background-color: var(--nav-bar-color);
+    background-color: var(--slack-color);
     color: #fff;
 }
 
