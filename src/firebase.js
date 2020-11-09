@@ -18,3 +18,5 @@ const provider = new firebase.auth.GoogleAuthProvider();
 
 export {auth, provider};
 export default db;
+
+//The blank strings will be replaced by Environment Variables when the application is deployed
