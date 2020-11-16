@@ -19,7 +19,7 @@ function Sidebar() {
 	const [channels, setChannels] = React.useState([]);
 
 	React.useEffect(() => {
-			db.collection("ROOM").onSnapshot(
+			db.collection("ROOM").orderBy('NAME').onSnapshot(
 				(snapshot) => 
 				(
 					setChannels(
@@ -58,10 +58,13 @@ function Sidebar() {
 			<hr />
 			<SidebarOption Icon = {ExpandMoreIcon} title = 'Show Channels' />
 			<hr />
-			<SidebarOption Icon = {AddIcon} title = 'Add Channel' />
-			{channels.map(channel =>
-				<SidebarOption Icon = {AddIcon} title = {channel.name} />
-				)}
+			<SidebarOption Icon = {AddIcon} title = 'Add Channel' addChannelOption = '1' />
+			{
+				channels.map(
+					channel =>
+					<SidebarOption  title = {channel.name} id = {channel.id} />
+				)
+			}
 		</div>
 	)
 }
