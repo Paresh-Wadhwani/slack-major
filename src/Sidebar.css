@@ -5,6 +5,7 @@
     max-width: 260px;
     color: white;
     flex: 0.3;
+    height: 100vh;
 }
 
 .sidebar__header
