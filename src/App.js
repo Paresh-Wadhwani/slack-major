@@ -1,27 +1,40 @@
-// import { Router } from '@material-ui/icons';
 import './App.css';
 import Header from './Header.js';
 import Sidebar from './Sidebar.js';
 import Chat from './Chat.js';
+import Login from './Login.js';
+import React, { useState } from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
+	const [user, setUser] = useState(null);
+
 	return (
 		<div className="App">
 			<Router>
-				<Header />
-				<div className = 'app__body'>
-					<Sidebar />
-					<Switch>
-						<Route path = '/room/:roomId'>
-							{<Chat />}
-							
-						</Route>
-						<Route path = '/'>
-							<h1>Welcome</h1>
-						</Route>
-					</Switch>
-				</div>
+				{
+					!user
+					? (
+						<Login />
+					) :
+					(
+						<>
+						<Header />
+						<div className = 'app__body'>
+							<Sidebar />
+							<Switch>
+								<Route path = '/room/:roomId'>
+									{<Chat />}
+									
+								</Route>
+								<Route path = '/'>
+									<h1>Welcome</h1>
+								</Route>
+							</Switch>
+						</div>
+						</>
+					)
+				}
 			</Router>
 		</div>
 	);
