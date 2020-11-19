@@ -14,9 +14,11 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import db from './firebase.js';
+import {useStateValue} from './StateProvider.js';
 
 function Sidebar() {
 	const [channels, setChannels] = React.useState([]);
+	const [{user}] = useStateValue()
 
 	React.useEffect(() => {
 			db.collection("ROOM").orderBy('NAME').onSnapshot(
@@ -42,7 +44,7 @@ function Sidebar() {
 					<h2>Server Name</h2>
 					<h3>
 						<FiberManualRecordIcon />
-						User Name
+						{user?.displayName}
 					</h3>
 				</div>
 				<CreateIcon />

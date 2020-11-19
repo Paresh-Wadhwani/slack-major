@@ -3,7 +3,7 @@ import Header from './Header.js';
 import Sidebar from './Sidebar.js';
 import Chat from './Chat.js';
 import Login from './Login.js';
-import React, { useState } from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {useStateValue} from './StateProvider.js'
 

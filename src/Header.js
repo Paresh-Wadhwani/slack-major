@@ -3,18 +3,19 @@ import './Header.css';
 import { Avatar } from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import SearchIcon from '@material-ui/icons/Search';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline'
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import {useStateValue} from './StateProvider.js';
 
 function Header()
 {
+	const [{user}] = useStateValue();
     return(
         <div className = 'header'>
             <div className = 'header__left'>
                 <Avatar
                     className = 'header__avatar'
-                    src = 'https://thumbs.dreamstime.com/b/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg'
-                    // src = {user?.photoURL}
-                    alt = 'something'
+                    src = {user?.photoURL}
+                    alt = {user?.diaplayName}
                 />
                 <AccessTimeIcon />
             </div>

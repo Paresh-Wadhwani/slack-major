@@ -9,7 +9,8 @@
 {
     height: 50px;
     width: 50px;
-    object-fit: contain;
+	object-fit: contain;
+	padding-right: 10px;
 }
 
 .message__timestamp
