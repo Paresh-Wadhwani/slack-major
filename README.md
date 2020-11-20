@@ -1,27 +1,20 @@
-## Available Scripts
+## Slack Clone
 
-In the project directory, you can run:
+Hi everyone. This is a clone of the channel-based messaging app slack.
 
-### `npm start`
+Source Code is available for you guys to use, modify, or suggest changes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* **React** - A JavaScript Framework. Most of the app is build using React.
+* **JSX** - Stands for JavaScript XML. Allows us to write HTML in React with some cool addons.
+* **React Hooks** - Quite complex for a good one-liner.
+* **CSS** - For styling the components.
+* **Cloud Firestore** - A very flexible and easy-to-use database.
+* **React Router** - Used to navigate between pages without reloading the page.
 
-### `npm run build`
+## Tools used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+* **Netlify** - To deploy Frontend.
+* **Firebase** - Handle Database and authentication.
+* **Github** - Version control.
